@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "babel_1": "babel js/set_selectors_select.js --out-dir js/babel --presets=@babel/env",
     "babel_2": "babel js/get_stylerules.js --out-dir js/babel --presets=@babel/env",
     "build": "npm-run-all babel_1 babel_2"
