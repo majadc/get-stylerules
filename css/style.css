@@ -1,0 +1,44 @@
+p {
+  font-size: 1.5em;
+  color: hsl(100, 50%, 120%);
+  width: auto;
+  height: auto;
+  color: #000;
+}
+
+.class {
+  display: block;
+  font-size: 20px;
+  background-color: coral;
+  width: 40em;
+  height: 4em;
+}
+.class p {
+  font-size: 2rem;
+  color: seagreen;
+  width: 50%;
+  height: 5vh;
+}
+#id {
+  display: inline-block;
+  font-size: 10px;
+  background-color:rgb(55, 25, 255);
+  width: 40px;
+  height: 20px;
+}
+@media (max-width: 900px) {
+  p {
+    background-color: inherit;
+  }
+  
+  .class {
+    background-color: gainsboro;
+  }
+  .class p {
+    background-color: salmon;
+  }
+  #id {
+    background-color: bisque;
+  }
+}
+

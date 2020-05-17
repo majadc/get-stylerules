@@ -1,0 +1,23 @@
+{
+  "name": "get_stylesheet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel_1": "babel js/set_selectors_select.js --out-dir js/babel --presets=@babel/env",
+    "babel_2": "babel js/get_stylerules.js --out-dir js/babel --presets=@babel/env",
+    "build": "npm-run-all babel_1 babel_2"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7",
+    "@babel/standalone": "^7.9.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6"
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get stylesheet</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" >
+  <link rel="stylesheet" href="css/normalize.css" type="text/css" >
+  <link rel="stylesheet" href="css/bootstrap.css?v4.4.1" type="text/css" >
+  <link rel="stylesheet" href="css/prism.css" type="text/css" >
+  <link rel="stylesheet" href="css/get_stylerules.css" type="text/css" >
+ 
+</head>
+<body>
+
+  
+  <div class="get-stylerules">
+    <form class="get-stylerules__form">
+      <h2>Get CSS rules from style sheet:</h2>
+      <p>
+        There are five style sheets linked to this demo. There are listed below.<br/>
+        When you choose a style sheet, the list of available selectors, from this style sheet, refresh.<br/>
+        Then you can choose a selector that the CSS rules you want to see.
+      </p>
+      <p>
+        <label for="">Choose a style sheet from which you want to get the CSS style rules:</label>
+         <select name="get-stylerules-stylesheet" id="get-stylerules-stylesheet" class="get-stylerules__select">
+          <option value="style.css">style.css</option>
+          <option value="normalize.css">normalize.css</option>
+          <option value="bootstrap.css">bootstrap.css</option>
+          <option value="prism.css">prism.css</option>
+          <option value="get_stylerules.css">get.css</option>
+         </select>
+      </p>
+      <p>
+        <label>Coose a selector:</label>
+        <select name="get-stylerules-selector" id="get-stylerules-selector" class="get-stylerules__select"></select>
+      </p>  
+    </form>
+    <h3>The CSS rules:</h3>
+    <div class="get-stylerules__output">
+      <pre><code class="language-css" id="get-stylerules-output"></code></pre>
+    </div>
+  </div>
+
+  <script src="js/prism.js"></script>
+  <script src="js/babel/get_stylerules.js" ></script>
+  <script src="js/babel/set_selectors_select.js" ></script>
+  
+</body>
+</html>
