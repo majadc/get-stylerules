@@ -1,19 +1,10 @@
 "use strict";
 
-/*
-* get style rules from given style sheet and given selector
-* cssRulesMajadc.getCssStyleRules(nameOfStylesheet, selectorName);
-*/
 var cssRulesMajadc = {};
 (function () {
-  /*
-  * function takes name of stylesheet and name of selector ex: .class, h1, .class p
-  * goes through rules and check if it CSSStyleRules (type === 1) or MediaRules (type === 4)
-  * If it is CssStyleRule it invokes getStyleRules  if it is media rule it invoke functions getRuleFromMedia
-  Result is set in array and returned 
-  * I returns false if:
-  *  - there is not style sheet
-  *  - given selector does not exist in stylesheet
+  /* Function takes a name of stylesheet and a name of selector e.g: .class, h1, .class p, p.
+  * If the style rules exist in the stylesheet,
+  *function returns them if not it returns empty string.
   */
   this.getCssStyleRules = function (nameOfStylesheet, selectorName) {
     var styleSheetRules = getCssStyleSheet(nameOfStylesheet).cssRules;
@@ -43,8 +34,8 @@ var cssRulesMajadc = {};
     }
   };
   /*
-  * function takes name of stylesheet.
-  * It returns styleSheet Object StyleSheet if it exists.
+  * Function takes a name of stylesheet.
+  * It returns styleSheet Object if it exists.
   */
 
 
@@ -65,8 +56,6 @@ var cssRulesMajadc = {};
           if (hrefStylesheet === nameOfStylesheet) {
             return styleSheets[key];
           }
-        } else {
-          return false;
         }
       }
     } else {
@@ -74,8 +63,9 @@ var cssRulesMajadc = {};
     }
   }
   /*
-  * Functions takes cssStyleRule and selector and check if cssStyleRule.selectorText includes searching selector
-  * it returns formatted properties if exists or false another way
+  * Functions takes a cssStyleRule Object and a name of selector.
+  * It checks if cssStyleRule.selectorText includes searching selector.
+  * It returns formatted CSS rules, if they exist.
   */
 
 
@@ -87,8 +77,8 @@ var cssRulesMajadc = {};
     }
   }
   /*
-  * Function takes names of selectors from cssStyleRule and changes all to lowerCase
-  makes a array and removes spaces and returns selectors names array. It is used in getCssRuleset() function
+  * Function takes names of selectors from cssStyleRule.
+  * It returns a array of all selectors names.
   */
 
 
@@ -102,7 +92,7 @@ var cssRulesMajadc = {};
     return selectorsArray;
   }
   /*
-  * Function returns formatted rule
+  * Function returns formatted style rules.
   */
 
 
@@ -122,7 +112,7 @@ var cssRulesMajadc = {};
     }
   }
   /*
-  * Function takes MediaRule and returns Css Rule
+  * Function takes MediaRule and returns style rules.
   */
 
 

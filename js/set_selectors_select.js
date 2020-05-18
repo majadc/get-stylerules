@@ -38,7 +38,7 @@ let showCSSRulesMajadc = {
   
     if ( (nameOfStyleSheet !== '') && (nameOfSelector !== '') ) {
       let outputCssStyleRules = cssRulesMajadc.getCssStyleRules(nameOfStyleSheet, nameOfSelector);
-      if ( outputCssStyleRules ) {
+      if ( outputCssStyleRules !== '' ) {
         getStyleOutput.innerHTML = outputCssStyleRules;
         if ( window.Prism !== undefined) {
           Prism.highlightElement(getStyleOutput);
@@ -151,8 +151,6 @@ let selectorsStylesheetMajadc = {
           if ( hrefStylesheet === this.styleSheetName() ) {
               return styleSheets[key];
           }
-        } else {
-          return false;
         }
        
       }

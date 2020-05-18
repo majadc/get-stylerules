@@ -38,7 +38,7 @@ var showCSSRulesMajadc = {
     if (nameOfStyleSheet !== '' && nameOfSelector !== '') {
       var outputCssStyleRules = cssRulesMajadc.getCssStyleRules(nameOfStyleSheet, nameOfSelector);
 
-      if (outputCssStyleRules) {
+      if (outputCssStyleRules !== '') {
         getStyleOutput.innerHTML = outputCssStyleRules;
 
         if (window.Prism !== undefined) {
@@ -182,8 +182,6 @@ var selectorsStylesheetMajadc = {
           if (hrefStylesheet === this.styleSheetName()) {
             return styleSheets[key];
           }
-        } else {
-          return false;
         }
       }
     } else {
