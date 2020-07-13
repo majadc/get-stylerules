@@ -88,10 +88,10 @@ let cssRulesMajadc = {};
       listOfPropertiesArray.splice(-1, 1);
     }
       if (ruleMediaAtRule) {
-        return `  ${selector} {\n     ${listOfPropertiesArray.join(';\n     ')}\n  }\n}`;
+        return `  ${selector} {\n     ${listOfPropertiesArray.join(';\n     ')};\n  }\n}`;
         
       } else {
-        return `${selector} {\n   ${listOfPropertiesArray.join(';\n  ')}\n}\n`;
+        return `${selector} {\n   ${listOfPropertiesArray.join(';\n  ')};\n  }\n`;
       }
     
   

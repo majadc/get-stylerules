@@ -63,7 +63,7 @@ var cssRulesMajadc = {};
     }
   }
   /*
-  * Functions takes a cssStyleRule Object and a name of selector.
+  * Function takes a cssStyleRule Object and a name of selector.
   * It checks if cssStyleRule.selectorText includes searching selector.
   * It returns formatted CSS rules, if they exist.
   */
@@ -106,9 +106,9 @@ var cssRulesMajadc = {};
     }
 
     if (ruleMediaAtRule) {
-      return "  ".concat(selector, " {\n     ").concat(listOfPropertiesArray.join(';\n     '), "\n  }\n}");
+      return "  ".concat(selector, " {\n     ").concat(listOfPropertiesArray.join(';\n     '), ";\n  }\n}");
     } else {
-      return "".concat(selector, " {\n   ").concat(listOfPropertiesArray.join(';\n  '), "\n}\n");
+      return "".concat(selector, " {\n   ").concat(listOfPropertiesArray.join(';\n  '), ";\n  }\n");
     }
   }
   /*
